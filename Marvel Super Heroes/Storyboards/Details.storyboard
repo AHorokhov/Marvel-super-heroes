@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Hero Details View Controller-->
+        <scene sceneID="z7h-RK-VeI">
+            <objects>
+                <viewController storyboardIdentifier="Details" id="nfM-65-DzW" customClass="HeroDetailsViewController" customModule="Marvel_Super_Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gpD-o7-qFT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vG9-C9-nKo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="500"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="imi-A5-2sg"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5K-OM-JXy">
+                                <rect key="frame" x="10" y="544" width="394" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="1nT-ya-LGD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="mfk-Wa-5FQ">
+                                <rect key="frame" x="0.0" y="564" width="414" height="298"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rcD-TL-2oz" firstAttribute="bottom" secondItem="mfk-Wa-5FQ" secondAttribute="bottom" id="AtQ-kD-lY5"/>
+                            <constraint firstItem="rcD-TL-2oz" firstAttribute="trailing" secondItem="mfk-Wa-5FQ" secondAttribute="trailing" id="DGi-hF-uk2"/>
+                            <constraint firstItem="Q5K-OM-JXy" firstAttribute="top" secondItem="vG9-C9-nKo" secondAttribute="bottom" id="QgP-cz-wye"/>
+                            <constraint firstItem="mfk-Wa-5FQ" firstAttribute="leading" secondItem="rcD-TL-2oz" secondAttribute="leading" id="Rmt-9p-ZGm"/>
+                            <constraint firstItem="Q5K-OM-JXy" firstAttribute="leading" secondItem="rcD-TL-2oz" secondAttribute="leading" constant="10" id="ZLy-C8-BT3"/>
+                            <constraint firstItem="vG9-C9-nKo" firstAttribute="top" secondItem="rcD-TL-2oz" secondAttribute="top" id="hu4-Gs-sGt"/>
+                            <constraint firstItem="mfk-Wa-5FQ" firstAttribute="top" secondItem="Q5K-OM-JXy" secondAttribute="bottom" id="rws-ro-h3F"/>
+                            <constraint firstAttribute="trailing" secondItem="vG9-C9-nKo" secondAttribute="trailing" id="uQm-Pc-Ita"/>
+                            <constraint firstItem="vG9-C9-nKo" firstAttribute="leading" secondItem="gpD-o7-qFT" secondAttribute="leading" id="xqz-Yc-3uu"/>
+                            <constraint firstItem="rcD-TL-2oz" firstAttribute="trailing" secondItem="Q5K-OM-JXy" secondAttribute="trailing" constant="10" id="xzb-QR-BuT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rcD-TL-2oz"/>
+                    </view>
+                    <connections>
+                        <outlet property="heroImaveView" destination="vG9-C9-nKo" id="rpP-WK-MDy"/>
+                        <outlet property="heroNameLabel" destination="Q5K-OM-JXy" id="y3c-97-a0B"/>
+                        <outlet property="itemsStackView" destination="mfk-Wa-5FQ" id="ZRX-La-QjJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="44n-yj-Opu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-5" y="-71"/>
+        </scene>
+        <!--Items Collection View Controller-->
+        <scene sceneID="LVh-36-EWf">
+            <objects>
+                <collectionViewController id="Y16-GM-h26" customClass="ItemsCollectionViewController" customModule="Marvel_Super_Heroes" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="4ql-yi-Aom">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hgU-zj-z4N">
+                            <size key="itemSize" width="260" height="351"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCollectionCell" id="fjP-np-Spa" customClass="ItemCollectionCell" customModule="Marvel_Super_Heroes" customModuleProvider="target">
+                                <rect key="frame" x="77" y="0.0" width="260" height="351"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="260" height="351"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bJy-1N-ZqW">
+                                            <rect key="frame" x="0.0" y="0.0" width="260" height="200"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="200" id="ijq-ZJ-6z8"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TY-OL-762">
+                                            <rect key="frame" x="0.0" y="200" width="260" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="IQD-lg-TQA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXf-zo-5JM">
+                                            <rect key="frame" x="0.0" y="220" width="260" height="131"/>
+                                            <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="6TY-OL-762" firstAttribute="top" secondItem="bJy-1N-ZqW" secondAttribute="bottom" id="6Ua-Yf-6cL"/>
+                                    <constraint firstAttribute="bottom" secondItem="vXf-zo-5JM" secondAttribute="bottom" id="FhZ-5u-2oh"/>
+                                    <constraint firstItem="6TY-OL-762" firstAttribute="leading" secondItem="fjP-np-Spa" secondAttribute="leading" id="Of2-Z7-HET"/>
+                                    <constraint firstAttribute="trailing" secondItem="6TY-OL-762" secondAttribute="trailing" id="Rvt-U4-7ti"/>
+                                    <constraint firstAttribute="trailing" secondItem="bJy-1N-ZqW" secondAttribute="trailing" id="hzk-68-qkN"/>
+                                    <constraint firstAttribute="trailing" secondItem="vXf-zo-5JM" secondAttribute="trailing" id="ihY-lb-ifQ"/>
+                                    <constraint firstItem="vXf-zo-5JM" firstAttribute="leading" secondItem="fjP-np-Spa" secondAttribute="leading" id="k52-1F-tZD"/>
+                                    <constraint firstItem="vXf-zo-5JM" firstAttribute="top" secondItem="6TY-OL-762" secondAttribute="bottom" id="tmW-j7-Xyx"/>
+                                    <constraint firstItem="bJy-1N-ZqW" firstAttribute="top" secondItem="fjP-np-Spa" secondAttribute="top" id="x0H-4M-ttb"/>
+                                    <constraint firstItem="bJy-1N-ZqW" firstAttribute="leading" secondItem="fjP-np-Spa" secondAttribute="leading" id="zAh-aS-mJy"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="vXf-zo-5JM" id="4fZ-VJ-Q8h"/>
+                                    <outlet property="mainImageView" destination="bJy-1N-ZqW" id="VmG-NM-iPo"/>
+                                    <outlet property="titleLabel" destination="6TY-OL-762" id="s9j-ov-DZZ"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Y16-GM-h26" id="1cD-Gi-aP6"/>
+                            <outlet property="delegate" destination="Y16-GM-h26" id="bme-xL-cy6"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fgj-fS-OTX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866.66666666666674" y="-72.321428571428569"/>
+        </scene>
+    </scenes>
+</document>

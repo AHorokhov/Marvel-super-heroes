@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="fGy-LO-YLh">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NPx-cW-bfh">
+                <size key="itemSize" width="260" height="351"/>
+                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            </collectionViewFlowLayout>
+            <cells/>
+        </collectionView>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="itemCollectionCell" id="PgD-Bg-7aa" customClass="ItemCollectionCell" customModule="Marvel_Super_Heroes" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="260" height="351"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="260" height="351"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="h5J-wD-0NF">
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="200"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="eFE-sd-6kn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMY-j2-yWY">
+                        <rect key="frame" x="0.0" y="200" width="260" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="oTq-bs-kfL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wTC-Ob-HRL">
+                        <rect key="frame" x="0.0" y="220" width="260" height="131"/>
+                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="wTC-Ob-HRL" firstAttribute="leading" secondItem="PgD-Bg-7aa" secondAttribute="leading" id="1Ed-xa-dVw"/>
+                <constraint firstItem="h5J-wD-0NF" firstAttribute="leading" secondItem="PgD-Bg-7aa" secondAttribute="leading" id="FiM-tR-FMb"/>
+                <constraint firstAttribute="trailing" secondItem="h5J-wD-0NF" secondAttribute="trailing" id="OKo-te-1N4"/>
+                <constraint firstItem="h5J-wD-0NF" firstAttribute="top" secondItem="PgD-Bg-7aa" secondAttribute="top" id="Qik-1R-fDk"/>
+                <constraint firstAttribute="bottom" secondItem="wTC-Ob-HRL" secondAttribute="bottom" id="UH5-RL-Jz6"/>
+                <constraint firstItem="wTC-Ob-HRL" firstAttribute="top" secondItem="sMY-j2-yWY" secondAttribute="bottom" id="eXX-17-psj"/>
+                <constraint firstItem="sMY-j2-yWY" firstAttribute="leading" secondItem="PgD-Bg-7aa" secondAttribute="leading" id="gQK-oZ-Fca"/>
+                <constraint firstItem="sMY-j2-yWY" firstAttribute="top" secondItem="h5J-wD-0NF" secondAttribute="bottom" id="ipZ-5v-ekc"/>
+                <constraint firstAttribute="trailing" secondItem="sMY-j2-yWY" secondAttribute="trailing" id="vX9-FW-TRc"/>
+                <constraint firstAttribute="trailing" secondItem="wTC-Ob-HRL" secondAttribute="trailing" id="vbi-wm-5Ue"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="kPo-Dy-tPU"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="wTC-Ob-HRL" id="aCg-dH-QWm"/>
+                <outlet property="mainImageView" destination="h5J-wD-0NF" id="xad-AL-i5a"/>
+                <outlet property="titleLabel" destination="sMY-j2-yWY" id="2Et-xe-vab"/>
+            </connections>
+            <point key="canvasLocation" x="-1412" y="-71"/>
+        </collectionViewCell>
+    </objects>
+</document>
